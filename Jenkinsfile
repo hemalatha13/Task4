@@ -3,7 +3,7 @@ properties([[$class: 'GithubProjectProperty',
              projectUrlStr: 'https://github.com/hemalatha13/Task4.git/'], 
             pipelineTriggers([githubPush()])])
 
-    
+    /// kijjjumj
 
 pipeline {
     agent any
