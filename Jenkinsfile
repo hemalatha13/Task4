@@ -2,7 +2,7 @@ properties([
   pipelineTriggers([
     upstream(
       threshold: 'SUCCESS',
-      upstreamProjects: '../Jenkinsfile/master'
+      upstreamProjects: '../upstream/master'
     )
   ])
 ])
@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                echo 'Hello hema'
+                echo 'Hello hema im downstream'
             }
         }
     }
