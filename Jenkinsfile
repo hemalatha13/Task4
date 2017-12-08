@@ -1,26 +1,30 @@
-properties([[$class: 'GithubProjectProperty', 
-             displayName: '', 
-             projectUrlStr: 'https://github.com/hemalatha13/Task4.git/'], 
-            pipelineTriggers([githubPush()])])
-
-    /// kijjjumj
+#!/usr/bin/env groovy
+properties([
+    [$class: 'GithubProjectProperty',
+    displayName: '',
+    projectUrlStr: 'https://github.com/VeridicSolutions99/Veridic_Atlanta.git/'],
+    pipelineTriggers([githubPush()])])
 
 pipeline {
-    agent any
+    agent any 
+
     stages {
-        stage('Example') {
+        stage('Build') { 
+            steps { 
+                sh 'pwd' 
+            }
+        }
+        stage('Test'){
             steps {
-                echo 'Hello World'
+                sh 'java -version'
+                
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'ls'
+                sh 'pwd'
             }
         }
     }
-    post { 
-        always { 
-            echo 'I will always say Hello again!'
-            echo 'I am task 5'
-                                echo 'I am task janckjjks'
-
-        }
-    }
 }
- 
