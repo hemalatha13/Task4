@@ -13,9 +13,7 @@ pipeline {
         stage('Example') {
             steps {
                 echo 'Hello hema im downstream'
-              if (env.BRANCH_NAME == 'master') {
-    build '../upstream/master'
-}
+              
             }
         }
     }
