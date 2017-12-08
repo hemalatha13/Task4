@@ -1,3 +1,12 @@
+properties([
+  pipelineTriggers([
+    upstream(
+      threshold: 'SUCCESS',
+      upstreamProjects: '../Jenkinsfile/master'
+    )
+  ])
+])
+
 pipeline {
     agent any
     stages {
